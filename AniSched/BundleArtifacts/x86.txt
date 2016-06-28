@@ -1,6 +1,2 @@
-MainPackage=E:\Backup\Dev\AniSched-Universal-CSharp\AniSched\bin\x86\Release\AniSched_1.1.4.0_x86.appx
-SymbolPackage=E:\Backup\Dev\AniSched-Universal-CSharp\AniSched\AppPackages\AniSched_1.1.4.0\AniSched_1.1.4.0_x86.appxsym
-ResourcePack=E:\Backup\Dev\AniSched-Universal-CSharp\AniSched\bin\x86\Release\AniSched_1.1.4.0_scale-100.appx
-ResourcePack=E:\Backup\Dev\AniSched-Universal-CSharp\AniSched\bin\x86\Release\AniSched_1.1.4.0_scale-125.appx
-ResourcePack=E:\Backup\Dev\AniSched-Universal-CSharp\AniSched\bin\x86\Release\AniSched_1.1.4.0_scale-150.appx
-ResourcePack=E:\Backup\Dev\AniSched-Universal-CSharp\AniSched\bin\x86\Release\AniSched_1.1.4.0_scale-400.appx
+MainPackage=E:\Backup\Development\Anisched-Universal-CSharp_New\Anisched\bin\x86\Release\Anisched_1.3.7.0_x86.appx
+SymbolPackage=E:\Backup\Development\Anisched-Universal-CSharp_New\Anisched\AppPackages\Anisched_1.3.7.0_Test\Anisched_1.3.7.0_x86.appxsym
