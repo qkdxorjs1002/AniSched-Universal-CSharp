@@ -5,7 +5,7 @@
     xmlns:local="using:AniSched"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" RequestedTheme="Light">
+    mc:Ignorable="d" RequestedTheme="Light" IsTabStop="True" FontSize="{ThemeResource ContentControlFontSize}">
     <Page.Resources>
         <ControlTemplate x:Key="BtnControlTemplate" TargetType="Button">
             <Grid x:Name="RootGrid" Background="{TemplateBinding Background}">
@@ -20,11 +20,15 @@
                             <Storyboard>
                                 <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter"
                                                    Storyboard.TargetProperty="BorderBrush">
-                                    <DiscreteObjectKeyFrame KeyTime="0" Value="#fffafafa" />
+                                    <DiscreteObjectKeyFrame KeyTime="0" Value="#FFFAFAFA" />
+                                </ObjectAnimationUsingKeyFrames>
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter"
+                                                   Storyboard.TargetProperty="BorderThickness">
+                                    <DiscreteObjectKeyFrame KeyTime="0" Value="0, 0, 0, 4" />
                                 </ObjectAnimationUsingKeyFrames>
                                 <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter"
                                                    Storyboard.TargetProperty="Foreground">
-                                    <DiscreteObjectKeyFrame KeyTime="0" Value="Black" />
+                                    <DiscreteObjectKeyFrame KeyTime="0" Value="#FFFAFAFA" />
                                 </ObjectAnimationUsingKeyFrames>
                                 <PointerUpThemeAnimation Storyboard.TargetName="RootGrid" />
                             </Storyboard>
@@ -90,9 +94,9 @@
                     <ColumnDefinition Width="1*" MaxWidth="300"/>
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="1">
-                    <TextBox x:Name="SearchList" BorderThickness="1" RequestedTheme="Light" Foreground="#FFFAFAFA" SelectionHighlightColor="#FFFE3B72" Margin="10,0" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular" InputScope="Default" BorderBrush="#FFFAFAFA" Background="#FFFE3B72" MinHeight="30" MaxHeight="30" MinWidth="100" IsSpellCheckEnabled="False" IsTextPredictionEnabled="False" TextChanged="SearchList_TextChanged" GotFocus="SearchList_GotFocus" PlaceholderText="" IsEnabled="False"/>
+                    <TextBox x:Name="SearchList" BorderThickness="1" RequestedTheme="Light" Foreground="#FFFAFAFA" SelectionHighlightColor="#FFFE3B72" Margin="10,0" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular" InputScope="Default" BorderBrush="#FFFAFAFA" Background="#FFFE3B72" MinHeight="30" MaxHeight="30" MinWidth="100" IsSpellCheckEnabled="False" IsTextPredictionEnabled="False" GotFocus="SearchList_GotFocus" PlaceholderText="" IsEnabled="False" KeyUp="SearchList_KeyUp"/>
                 </Grid>
-                <Button x:Name="LIST_BTN" Grid.Column="0" Content="방영 애니" Background="#FFFE3B72" Foreground="#FFFAFAFA" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular" FontWeight="Bold" BorderThickness="0,2,0,0" RequestedTheme="Light" IsHoldingEnabled="False" IsDoubleTapEnabled="False" IsRightTapEnabled="False" Template="{StaticResource BtnControlTemplate}" Click="LIST_BTN_Click" Margin="8,0,0,0" BorderBrush="#FFFAFAFA" MaxWidth="80" MaxHeight="30" MinWidth="80" MinHeight="30"/>
+                <Button x:Name="LIST_BTN" Grid.Column="0" Content="방영 애니" Background="#FFFE3B72" Foreground="#FFFAFAFA" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular" FontWeight="Bold" BorderThickness="0" RequestedTheme="Light" IsHoldingEnabled="False" IsDoubleTapEnabled="False" IsRightTapEnabled="False" Template="{StaticResource BtnControlTemplate}" Click="LIST_BTN_Click" Margin="8,0,0,0" BorderBrush="#FFFAFAFA" MaxWidth="80" MaxHeight="30" MinWidth="80" MinHeight="30"/>
             </Grid>
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
@@ -115,15 +119,15 @@
                     <!--NEW-->
                     <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="SUN_BTN" Grid.Column="0" Content="日" Click="BtnClick" Background="#FFFE3B72" Foreground="#FFFAFAFA" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular" FontWeight="Bold" BorderThickness="0" RequestedTheme="Light" IsHoldingEnabled="False" IsDoubleTapEnabled="False" IsRightTapEnabled="False" Template="{StaticResource BtnControlTemplate}"/>
-                <Button x:Name="MON_BTN" Grid.Column="1" Content="月" Click="BtnClick" Background="#FFFE3B72" Foreground="#FFFAFAFA" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular" FontWeight="Bold" BorderThickness="0" RequestedTheme="Light" IsHoldingEnabled="False" IsDoubleTapEnabled="False" IsRightTapEnabled="False" Template="{StaticResource BtnControlTemplate}"/>
-                <Button x:Name="TUE_BTN" Grid.Column="2" Content="火" Click="BtnClick" Background="#FFFE3B72" Foreground="#FFFAFAFA" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular" FontWeight="Bold" BorderThickness="0" RequestedTheme="Light" IsHoldingEnabled="False" IsDoubleTapEnabled="False" IsRightTapEnabled="False" Template="{StaticResource BtnControlTemplate}"/>
-                <Button x:Name="WED_BTN" Grid.Column="3" Content="水" Click="BtnClick" Background="#FFFE3B72" Foreground="#FFFAFAFA" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular" FontWeight="Bold" BorderThickness="0" RequestedTheme="Light" IsHoldingEnabled="False" IsDoubleTapEnabled="False" IsRightTapEnabled="False" Template="{StaticResource BtnControlTemplate}"/>
-                <Button x:Name="THU_BTN" Grid.Column="4" Content="木" Click="BtnClick" Background="#FFFE3B72" Foreground="#FFFAFAFA" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular" FontWeight="Bold" BorderThickness="0" RequestedTheme="Light" IsHoldingEnabled="False" IsDoubleTapEnabled="False" IsRightTapEnabled="False" Template="{StaticResource BtnControlTemplate}"/>
-                <Button x:Name="FRI_BTN" Grid.Column="5" Content="金" Click="BtnClick" Background="#FFFE3B72" Foreground="#FFFAFAFA" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular" FontWeight="Bold" BorderThickness="0" RequestedTheme="Light" IsHoldingEnabled="False" IsDoubleTapEnabled="False" IsRightTapEnabled="False" Template="{StaticResource BtnControlTemplate}"/>
-                <Button x:Name="SAT_BTN" Grid.Column="6" Content="土" Click="BtnClick" Background="#FFFE3B72" Foreground="#FFFAFAFA" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular" FontWeight="Bold" BorderThickness="0" RequestedTheme="Light" IsHoldingEnabled="False" IsDoubleTapEnabled="False" IsRightTapEnabled="False" Template="{StaticResource BtnControlTemplate}"/>
-                <Button x:Name="OVA_BTN" Grid.Column="7" Content="外" Click="BtnClick" Background="#FFFE3B72" Foreground="#FFFAFAFA" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular" FontWeight="Bold" BorderThickness="0" RequestedTheme="Light" IsHoldingEnabled="False" IsDoubleTapEnabled="False" IsRightTapEnabled="False" Template="{StaticResource BtnControlTemplate}"/>
-                <Button x:Name="NEW_BTN" Grid.Column="8" Content="新" Click="BtnClick" Background="#FFFE3B72" Foreground="#FFFAFAFA" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular" FontWeight="Bold" BorderThickness="0" RequestedTheme="Light" IsHoldingEnabled="False" IsDoubleTapEnabled="False" IsRightTapEnabled="False" Template="{StaticResource BtnControlTemplate}"/>
+                <Button x:Name="SUN_BTN" Grid.Column="0" Content="日" Click="BtnClick" Background="#FFFE3B72" Foreground="#FFFAFAFA" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular" FontWeight="Bold" BorderThickness="0" RequestedTheme="Light" IsHoldingEnabled="False" IsDoubleTapEnabled="False" IsRightTapEnabled="False" Template="{StaticResource BtnControlTemplate}" BorderBrush="{Binding Foreground, RelativeSource={RelativeSource Mode=Self}}"/>
+                <Button x:Name="MON_BTN" Grid.Column="1" Content="月" Click="BtnClick" Background="#FFFE3B72" Foreground="#FFFAFAFA" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular" FontWeight="Bold" BorderThickness="0" RequestedTheme="Light" IsHoldingEnabled="False" IsDoubleTapEnabled="False" IsRightTapEnabled="False" Template="{StaticResource BtnControlTemplate}" BorderBrush="{Binding Foreground, RelativeSource={RelativeSource Mode=Self}}"/>
+                <Button x:Name="TUE_BTN" Grid.Column="2" Content="火" Click="BtnClick" Background="#FFFE3B72" Foreground="#FFFAFAFA" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular" FontWeight="Bold" BorderThickness="0" RequestedTheme="Light" IsHoldingEnabled="False" IsDoubleTapEnabled="False" IsRightTapEnabled="False" Template="{StaticResource BtnControlTemplate}" BorderBrush="{Binding Foreground, RelativeSource={RelativeSource Mode=Self}}"/>
+                <Button x:Name="WED_BTN" Grid.Column="3" Content="水" Click="BtnClick" Background="#FFFE3B72" Foreground="#FFFAFAFA" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular" FontWeight="Bold" BorderThickness="0" RequestedTheme="Light" IsHoldingEnabled="False" IsDoubleTapEnabled="False" IsRightTapEnabled="False" Template="{StaticResource BtnControlTemplate}" BorderBrush="{Binding Foreground, RelativeSource={RelativeSource Mode=Self}}"/>
+                <Button x:Name="THU_BTN" Grid.Column="4" Content="木" Click="BtnClick" Background="#FFFE3B72" Foreground="#FFFAFAFA" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular" FontWeight="Bold" BorderThickness="0" RequestedTheme="Light" IsHoldingEnabled="False" IsDoubleTapEnabled="False" IsRightTapEnabled="False" Template="{StaticResource BtnControlTemplate}" BorderBrush="{Binding Foreground, RelativeSource={RelativeSource Mode=Self}}"/>
+                <Button x:Name="FRI_BTN" Grid.Column="5" Content="金" Click="BtnClick" Background="#FFFE3B72" Foreground="#FFFAFAFA" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular" FontWeight="Bold" BorderThickness="0" RequestedTheme="Light" IsHoldingEnabled="False" IsDoubleTapEnabled="False" IsRightTapEnabled="False" Template="{StaticResource BtnControlTemplate}" BorderBrush="{Binding Foreground, RelativeSource={RelativeSource Mode=Self}}"/>
+                <Button x:Name="SAT_BTN" Grid.Column="6" Content="土" Click="BtnClick" Background="#FFFE3B72" Foreground="#FFFAFAFA" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular" FontWeight="Bold" BorderThickness="0" RequestedTheme="Light" IsHoldingEnabled="False" IsDoubleTapEnabled="False" IsRightTapEnabled="False" Template="{StaticResource BtnControlTemplate}" BorderBrush="{Binding Foreground, RelativeSource={RelativeSource Mode=Self}}"/>
+                <Button x:Name="OVA_BTN" Grid.Column="7" Content="外" Click="BtnClick" Background="#FFFE3B72" Foreground="#FFFAFAFA" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular" FontWeight="Bold" BorderThickness="0" RequestedTheme="Light" IsHoldingEnabled="False" IsDoubleTapEnabled="False" IsRightTapEnabled="False" Template="{StaticResource BtnControlTemplate}" BorderBrush="{Binding Foreground, RelativeSource={RelativeSource Mode=Self}}"/>
+                <Button x:Name="NEW_BTN" Grid.Column="8" Content="新" Click="BtnClick" Background="#FFFE3B72" Foreground="#FFFAFAFA" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular" FontWeight="Bold" BorderThickness="0" RequestedTheme="Light" IsHoldingEnabled="False" IsDoubleTapEnabled="False" IsRightTapEnabled="False" Template="{StaticResource BtnControlTemplate}" BorderBrush="{Binding Foreground, RelativeSource={RelativeSource Mode=Self}}"/>
             </Grid>
             <Grid Grid.Row="2">
                 <ListView x:Name="TableView" IsItemClickEnabled="True" ItemClick="TableView_ItemClick" IsSwipeEnabled="False">
@@ -135,8 +139,7 @@
                                     <ControlTemplate TargetType="ListViewItem">
                                         <Grid x:Name="ContentBorder"
               Background="{TemplateBinding Background}"
-              BorderBrush="{TemplateBinding BorderBrush}"
-              BorderThickness="{TemplateBinding BorderThickness}">
+              BorderThickness="0" BorderBrush="#19000000">
                                             <VisualStateManager.VisualStateGroups>
                                                 <VisualStateGroup x:Name="CommonStates">
                                                     <VisualState x:Name="Normal">
@@ -404,7 +407,7 @@
                             Content="{TemplateBinding Content}"
                             HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                             VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                            Margin="{TemplateBinding Padding}"/>
+                            Margin="0"/>
                                             </Grid>
                                             <!-- The 'Xg' text simulates the amount of space one line of text will occupy.
                           In the DataPlaceholder state, the Content is not loaded yet so we
@@ -413,7 +416,7 @@
                     Opacity="0"
                     Text="Xg"
                     Foreground="{x:Null}"
-                    Margin="{TemplateBinding Padding}"
+                    Margin="0"
                     IsHitTestVisible="False"
                     AutomationProperties.AccessibilityView="Raw"/>
                                             <Rectangle x:Name="PlaceholderRect"
@@ -471,22 +474,25 @@
                     </ListView.ItemContainerStyle>
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <Grid x:Name="TableItem">
+                            <Grid x:Name="TableItem" Margin="0,7">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="1"/>
-                                    <ColumnDefinition Width="3*"/>
-                                    <ColumnDefinition Width="9*"/>
-                                    <ColumnDefinition Width="5*"/>
+                                    <ColumnDefinition Width="5"/>
+                                    <ColumnDefinition Width="1*"/>
                                 </Grid.ColumnDefinitions>
-                                <Grid Grid.Column="0" Background="{Binding c}" Margin="-21,0,0,0" Height="{ThemeResource ListViewItemMinHeight}" Width="4" BorderThickness="0,-1,0,0" />
+                                <Grid Grid.Column="0" Background="{Binding c}" Margin="0" Height="{ThemeResource ListViewItemMinHeight}" BorderThickness="0,-7,0,-8"/>
                                 <Grid Grid.Column="1">
-                                    <TextBlock Text="{Binding t}" Margin="0,0,5,0" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular"/>
-                                </Grid>
-                                <Grid Grid.Column="2">
-                                    <TextBlock Text="{Binding s}" Margin="5,0,5,0" TextWrapping="WrapWholeWords" VerticalAlignment="Center" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular"/>
-                                </Grid>
-                                <Grid Grid.Column="3">
-                                    <TextBlock Text="{Binding g}" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular"/>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="3*"/>
+                                        <RowDefinition Height="2*"/>
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Grid.Row="0" Text="{Binding s}" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" Margin="15,0,20,0" FontSize="16"/>
+                                    <Grid Grid.Row="1">
+                                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Opacity="0.65">
+                                            <TextBlock Text="{Binding t}" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular" VerticalAlignment="Center" TextAlignment="Center" HorizontalAlignment="Left" FontSize="13" Margin="20,0,5,0"/>
+                                            <TextBlock Text="-" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular" VerticalAlignment="Center" TextAlignment="Center" HorizontalAlignment="Left" FontSize="13"/>
+                                            <TextBlock Text="{Binding g}" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular" VerticalAlignment="Center" TextAlignment="Center" HorizontalAlignment="Left" FontSize="13" Margin="5,0,0,0"/>
+                                        </StackPanel>
+                                    </Grid>
                                 </Grid>
                             </Grid>
                         </DataTemplate>
@@ -520,6 +526,18 @@
                              AutoReverse="True" RepeatBehavior="Forever"
                              From="0" To="-115" Duration="0:0:10"/>
                     </Storyboard>
+                    <Storyboard x:Name="NamuWiki_Animation">
+                        <DoubleAnimation
+                             Storyboard.TargetProperty="Opacity"
+                             Storyboard.TargetName="SubView_Gridnamuwiki"
+                             From="0.5" To="1.0" Duration="0:0:0.1"/>
+                    </Storyboard>
+                    <Storyboard x:Name="Naver_Animation">
+                        <DoubleAnimation
+                             Storyboard.TargetProperty="Opacity"
+                             Storyboard.TargetName="SubView_Gridnaver"
+                             From="0.5" To="1.0" Duration="0:0:0.1"/>
+                    </Storyboard>
                 </Grid.Resources>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*"/>
@@ -531,7 +549,7 @@
                     <ColumnDefinition Width="0.5*"/>
                 </Grid.ColumnDefinitions>
                 <StackPanel Grid.Row="1" Grid.Column="1">
-                    <Image x:Name="Title_Image" PointerPressed="Exit_Grid_C_PointerPressed" ImageOpened="Title_Image_ImageOpened" Source="Assets/StoreLogo.png" RenderTransformOrigin="0.5,0.5" Opacity="0">
+                    <Image x:Name="Title_Image" RenderTransformOrigin="0.5,0.5" Opacity="0" ImageOpened="Title_Image_ImageOpened">
                         <Image.RenderTransform>
                             <CompositeTransform TranslateY="0"/>
                         </Image.RenderTransform>
@@ -542,15 +560,16 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="2*" MaxHeight="65" MinHeight="65"/>
                     <RowDefinition Height="1*" MaxHeight="30" MinHeight="30"/>
-                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="8*"/>
+                    <RowDefinition Height="2*" MaxHeight="50" MinHeight="50"/>
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0" Background="#FFFE3B72">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="3*"/>
                         <RowDefinition Height="2*"/>
                     </Grid.RowDefinitions>
-                    <TextBlock x:Name="SubView_T" Grid.Row="0" Text="" Margin="0,5,0,0" TextAlignment="Center" Foreground="#FFFAFAFA" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular" FontWeight="Bold" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center" TextTrimming="CharacterEllipsis"/>
-                    <TextBlock x:Name="SubView_L" Grid.Row="1" Text="" Margin="0,0,0,5" TextAlignment="Center" Foreground="#FFFAFAFA" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center" PointerPressed="SubView_L_PointerPressed"/>
+                    <TextBlock x:Name="SubView_T" Grid.Row="0" Text="" Margin="10,5,10,0" TextAlignment="Center" Foreground="#FFFAFAFA" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular" FontWeight="Bold" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center" TextTrimming="CharacterEllipsis"/>
+                    <TextBlock x:Name="SubView_L" Grid.Row="1" Text="" Margin="10,0,10,5" TextAlignment="Center" Foreground="#FFFAFAFA" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center" PointerPressed="SubView_L_PointerPressed"/>
                 </Grid>
                 <Grid Grid.Row="1" Background="#FFF0F0F0" BorderThickness="0,0,0,1" BorderBrush="#FFCDCDCD">
                     <Grid.ColumnDefinitions>
@@ -564,7 +583,7 @@
                     <TextBlock Grid.Column="2" x:Name="SubView_E" Text="{Binding ed}" Margin="0" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Left" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular" Foreground="#FF646464"/>
                 </Grid>
                 <Grid Grid.Row="2" Background="#FFFAFAFA">
-                    <ListView x:Name="SubView" IsItemClickEnabled="True" ItemClick="SubView_ItemClick">
+                    <ListView x:Name="SubView" IsItemClickEnabled="True" ItemClick="SubView_ItemClick" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular">
                         <ListView.ItemContainerStyle>
                             <Style TargetType="ListViewItem">
                                 <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
@@ -585,9 +604,9 @@
                                                         <VisualState x:Name="PointerOver">
                                                             <Storyboard>
                                                                 <DoubleAnimation Storyboard.TargetName="BorderBackground"
-                                 Storyboard.TargetProperty="Opacity"
-                                 Duration="0"
-                                 To="1"/>
+                                                                    Storyboard.TargetProperty="Opacity"
+                                                                    Duration="0"
+                                                                    To="1"/>
                                                                 <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BorderBackground" Storyboard.TargetProperty="Fill">
                                                                     <DiscreteObjectKeyFrame KeyTime="0" Value="#FFFE3B72" />
                                                                 </ObjectAnimationUsingKeyFrames>
@@ -916,18 +935,30 @@
                                         <ColumnDefinition Width="4*"/>
                                     </Grid.ColumnDefinitions>
                                     <Grid Grid.Column="0">
-                                        <TextBlock Text="{Binding s}" Margin="0" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular"/>
+                                        <TextBlock Text="{Binding s}" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular"/>
                                     </Grid>
                                     <Grid Grid.Column="1">
-                                        <TextBlock Text="{Binding n}" Margin="0,0,10,0" TextWrapping="WrapWholeWords" VerticalAlignment="Center" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular"/>
+                                        <TextBlock Text="{Binding n}" Margin="10,0" TextWrapping="WrapWholeWords" VerticalAlignment="Center" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular"/>
                                     </Grid>
                                     <Grid Grid.Column="2">
-                                        <TextBlock Text="{Binding d}" Margin="0" VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular"/>
+                                        <TextBlock Text="{Binding d}" VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center" FontFamily="Fonts/NotoSansCJKkr-Regular.otf#Noto Sans CJK KR Regular"/>
                                     </Grid>
                                 </Grid>
                             </DataTemplate>
                         </ListView.ItemTemplate>
                     </ListView>
+                </Grid>
+                <Grid Grid.Row="3" Background="#FFF0F0F0" BorderThickness="0,1,0,0" BorderBrush="#FFCDCDCD">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid x:Name="SubView_Gridnamuwiki" Grid.Column="0" BorderThickness="0,0,0.5,0" BorderBrush="#FFCDCDCD" PointerEntered="Animation_Begin" PointerExited="Animation_Stop" Opacity="0.5" Background="#00000000" PointerPressed="GoSearch">
+                        <Image Source="Assets/namuwiki_logo.png" Margin="0,0,0,5"/>
+                    </Grid>
+                    <Grid x:Name="SubView_Gridnaver" Grid.Column="1" BorderThickness="0.5,0,0,0" BorderBrush="#FFCDCDCD" PointerEntered="Animation_Begin" PointerExited="Animation_Stop" Opacity="0.5" Background="#00000000" PointerPressed="GoSearch">
+                        <Image Source="Assets/naver_logo.png" Margin="16"/>
+                    </Grid>
                 </Grid>
             </Grid>
         </Grid>
