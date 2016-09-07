@@ -1,4 +1,4 @@
-MainPackage=E:\Backup\Development\Anisched-Universal-CSharp_New\Anisched\bin\ARM\Release\Upload\Anisched_1.4.1.0_ARM.appx
+MainPackage=E:\Backup\Development\Anisched-Universal-CSharp_New\Anisched\bin\ARM\Release\Upload\Anisched_1.4.3.0_ARM.appx
 ResourcePack=E:\Backup\Development\Anisched-Universal-CSharp_New\Anisched\_scale-100.appx
 ResourcePack=E:\Backup\Development\Anisched-Universal-CSharp_New\Anisched\_scale-125.appx
 ResourcePack=E:\Backup\Development\Anisched-Universal-CSharp_New\Anisched\_scale-150.appx

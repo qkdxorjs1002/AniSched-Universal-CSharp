@@ -1,2 +1,2 @@
-MainPackage=E:\Backup\Development\Anisched-Universal-CSharp_New\Anisched\bin\x86\Release\Anisched_1.4.1.0_x86.appx
-SymbolPackage=E:\Backup\Development\Anisched-Universal-CSharp_New\Anisched\AppPackages\Anisched_1.4.1.0_Test\Anisched_1.4.1.0_x86.appxsym
+MainPackage=E:\Backup\Development\Anisched-Universal-CSharp_New\Anisched\bin\x86\Release\Anisched_1.4.3.0_x86.appx
+SymbolPackage=E:\Backup\Development\Anisched-Universal-CSharp_New\Anisched\AppPackages\Anisched_1.4.3.0_Test\Anisched_1.4.3.0_x86.appxsym

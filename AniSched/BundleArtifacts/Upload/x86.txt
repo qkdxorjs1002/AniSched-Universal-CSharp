@@ -1,1 +1,1 @@
-MainPackage=E:\Backup\Development\Anisched-Universal-CSharp_New\Anisched\bin\x86\Release\Upload\Anisched_1.4.1.0_x86.appx
+MainPackage=E:\Backup\Development\Anisched-Universal-CSharp_New\Anisched\bin\x86\Release\Upload\Anisched_1.4.3.0_x86.appx

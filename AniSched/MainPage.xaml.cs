@@ -113,7 +113,7 @@ namespace AniSched
             if (Is404 == false && IsNoList == false)
             {
                 RootObject mk = e.ClickedItem as RootObject;
-                Title_Image.Source = new BitmapImage(new Uri("http://novang.dlinkddns.com/anisched/" + mk.i + ".jpg", UriKind.Absolute));
+                Title_Image.Source = new BitmapImage(new Uri("http://anisched.moeru.ga/" + mk.i + ".jpg", UriKind.Absolute));
                 Title = mk.s;
                 SubView_T.Text = mk.a + (mk.a == "" ? ""  : " ") + mk.s;
                 SubView_ID.Text = Convert.ToString(mk.i);

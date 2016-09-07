@@ -1,1 +1,1 @@
-E:\Backup\Development\Anisched-Universal-CSharp_New\Anisched\AppPackages\Anisched_1.4.1.0\Anisched_1.4.1.0_x86_arm.appxbundle
+E:\Backup\Development\Anisched-Universal-CSharp_New\Anisched\AppPackages\Anisched_1.4.3.0\Anisched_1.4.3.0_x86_arm.appxbundle
