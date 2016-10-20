@@ -1,6 +1,0 @@
-MainPackage=E:\Backup\Development\Anisched-Universal-CSharp_New\Anisched\bin\ARM\Release\Anisched_1.4.3.0_ARM.appx
-SymbolPackage=E:\Backup\Development\Anisched-Universal-CSharp_New\Anisched\AppPackages\Anisched_1.4.3.0_Test\Anisched_1.4.3.0_ARM.appxsym
-ResourcePack=E:\Backup\Development\Anisched-Universal-CSharp_New\Anisched\bin\ARM\Release\Anisched_1.4.3.0_scale-100.appx
-ResourcePack=E:\Backup\Development\Anisched-Universal-CSharp_New\Anisched\bin\ARM\Release\Anisched_1.4.3.0_scale-125.appx
-ResourcePack=E:\Backup\Development\Anisched-Universal-CSharp_New\Anisched\bin\ARM\Release\Anisched_1.4.3.0_scale-150.appx
-ResourcePack=E:\Backup\Development\Anisched-Universal-CSharp_New\Anisched\bin\ARM\Release\Anisched_1.4.3.0_scale-400.appx
